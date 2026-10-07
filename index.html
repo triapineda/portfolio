@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ma Patricia Pineda | AI Content Creator & Video Editor</title>
+<meta name="description" content="Ma Patricia Pineda: AI content creation, video editing, social media management, and design for fashion brands and founders. Remote.">
+<meta property="og:title" content="Ma Patricia Pineda | AI Content Creator & Video Editor">
+<meta property="og:description" content="AI content, video editing, social media management, websites and email design.">
+<meta property="og:image" content="media/ice-1.jpg">
+<meta property="og:type" content="website">
+<style>html{-webkit-text-size-adjust:100%}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..700,100&family=Fredoka:wght@600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an editor's timeline. Each section is a "track" with a mono track label and real specs (ratio, duration, tool). */
+:root{
+  --bg:#fdfaf8;        /* notion-white page */
+  --surface:#ffffff;
+  --ink:#373b28;       /* olive ink */
+  --muted:#7a7c68;
+  --line:#ece4df;
+  --accent:#cf5679;    /* strawberry milk, deep enough for text */
+  --accent-ink:#ffffff;
+  --leaf:#7b8a47;      /* logo-tile olive */
+  --blush:#f9dfe6;     /* strawberry milk */
+  --pistachio:#cfe0a6; /* matcha foam */
+  --foot-bg:#6c7a3b;
+  --foot-fg:#fdf8f4;
+  --foot-pink:#f8c6d4;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --round:"Fredoka", "DM Sans", system-ui, sans-serif;
+  --gutter:clamp(16px,4vw,56px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#191c14;--surface:#22261b;--ink:#f2efe7;--muted:#aaad97;--line:#33382a;--accent:#f39bb4;--accent-ink:#191c14;--leaf:#b6c57f;--blush:#3b2830;--pistachio:#3c4628;--foot-bg:#2c331d;--foot-fg:#f2efe7;--foot-pink:#f39bb4;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#191c14;--surface:#22261b;--ink:#f2efe7;--muted:#aaad97;--line:#33382a;--accent:#f39bb4;--accent-ink:#191c14;--leaf:#b6c57f;--blush:#3b2830;--pistachio:#3c4628;--foot-bg:#2c331d;--foot-fg:#f2efe7;--foot-pink:#f39bb4;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
+.wrap{padding-inline:var(--gutter);max-width:1360px;margin:0 auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:600;font-variation-settings:"SOFT" 100;letter-spacing:-0.015em;text-wrap:balance;margin:0;line-height:1}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* cover, like the Notion board */
+.cover{height:clamp(56px,7vw,96px);background:
+  radial-gradient(40% 120% at 8% 50%, #c9dea0 0%, transparent 70%),
+  radial-gradient(35% 120% at 30% 40%, #eee3cf 0%, transparent 70%),
+  radial-gradient(45% 140% at 50% 55%, #f4bccb 0%, transparent 70%),
+  radial-gradient(30% 120% at 72% 40%, #e7e9b8 0%, transparent 70%),
+  radial-gradient(40% 130% at 94% 50%, #c4dc9a 0%, transparent 70%),
+  #f3ece2;filter:saturate(1.05)}
+:root[data-theme="dark"] .cover{opacity:.55}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cover{opacity:.55}}
+.badge{width:clamp(64px,7vw,84px);aspect-ratio:1;border-radius:6px;background:var(--leaf);color:#f6c4d2;display:grid;place-items:center;font-family:var(--round);font-weight:600;font-size:clamp(14px,1.6vw,18px);line-height:.82;text-align:center;letter-spacing:-.02em;margin-top:-28px;position:relative;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;flex-wrap:wrap}
+nav .name{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{text-decoration:none;font-size:14px;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,64px);align-items:end;padding-block:clamp(24px,5vw,64px) clamp(40px,6vw,88px)}
+.hero h1{font-size:clamp(44px,7.4vw,108px)}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{max-width:52ch;color:var(--muted);font-size:18px;margin:24px 0 0}
+.hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{font-family:var(--mono);font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--surface)}
+.chip.on{background:var(--leaf);border-color:var(--leaf);color:var(--blush)}
+.reel{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;min-width:0}
+.reel figure:nth-child(2){transform:translateY(-28px)}
+
+/* media tiles */
+figure{margin:0;min-width:0}
+.tile{position:relative;overflow:hidden;border-radius:12px;background:var(--surface)}
+.tile video,.tile img{display:block;width:100%;height:100%;object-fit:cover}
+.r916{aspect-ratio:9/16}.r34{aspect-ratio:3/4}.r45{aspect-ratio:4/5}.r11{aspect-ratio:1/1}
+.tc{position:absolute;left:8px;top:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;background:rgba(10,12,18,.62);color:#fff;padding:3px 6px;border-radius:3px;backdrop-filter:blur(4px)}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.4}
+figcaption b{color:var(--ink);font-weight:600;display:block}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink)}
+.svc{padding:28px 28px 36px 0;border-right:1px solid var(--line);min-width:0}
+.svc + .svc{padding-left:28px}
+.sub .client-tag{margin-bottom:4px}
+.svc:last-child{border-right:0}
+.svc h3{font-size:26px;margin:14px 0 12px}
+.svc p{color:var(--muted);margin:0 0 14px;max-width:40ch}
+.svc ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px}
+.svc li::before{content:"→ ";color:var(--accent)}
+.svc .pct{font-family:var(--mono);font-size:12px;color:var(--leaf)}
+
+/* tracks */
+section.track{padding-block:clamp(56px,8vw,112px) 0}
+.track-head{display:grid;grid-template-columns:140px 1fr auto;gap:24px;align-items:end;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:28px}
+.track-head .tid{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:500}
+.track-head h2{font-size:clamp(32px,4.6vw,60px)}
+.track-head p{grid-column:2/4;color:var(--muted);max-width:62ch;margin:6px 0 0}
+.track-head .spec{text-align:right}
+
+.grid-ai{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.grid-ai .wide{grid-column:span 2}
+.edits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.edit{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:20px;align-items:end}
+.edit h3{font-size:28px;margin:8px 0 10px}
+.edit p{color:var(--muted);margin:0 0 14px;font-size:15px}
+.steps{display:flex;gap:6px;flex-wrap:wrap}
+.steps span{font-family:var(--mono);font-size:11px;border:1px solid var(--line);background:var(--blush);padding:3px 7px;border-radius:3px;color:var(--muted)}
+
+.row4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.carousel{margin-bottom:40px}
+.carousel .meta{display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap;margin-bottom:12px}
+.carousel h3{font-size:24px}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.strip figure{scroll-snap-align:start;position:relative}
+.strip .n{position:absolute;right:8px;bottom:8px;font-family:var(--mono);font-size:10.5px;background:rgba(10,12,18,.62);color:#fff;padding:2px 6px;border-radius:3px}
+
+.statics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ads{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px;max-width:66%}
+.zoom{cursor:zoom-in;border:0;padding:0;background:none;width:100%;display:block;font:inherit;color:inherit;text-align:left}
+.zoom img{transition:transform .5s ease}
+.zoom:hover img{transform:scale(1.03)}
+
+.tools{display:flex;flex-wrap:wrap;gap:10px}
+.tool{border:1px solid var(--line);background:var(--surface);padding:12px 16px;border-radius:12px;min-width:0}
+.tool b{display:block;font-weight:600}
+.tool span{font-size:13px;color:var(--muted)}
+
+footer{margin-top:clamp(64px,9vw,128px);background:var(--foot-bg);color:var(--foot-fg);padding-block:clamp(48px,7vw,96px) 40px}
+footer h2{font-size:clamp(40px,7vw,96px);color:var(--foot-fg)}
+footer h2 em{font-style:italic;color:var(--foot-pink)}
+footer .contact{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:36px}
+footer .contact div{min-width:0}
+footer .mono{color:color-mix(in srgb,var(--foot-fg) 72%,var(--foot-bg))}
+footer .val{font-size:20px;font-weight:500;user-select:all;word-break:break-word}
+footer .fine{margin-top:56px;font-size:13px;color:color-mix(in srgb,var(--foot-fg) 68%,var(--foot-bg))}
+
+.clients{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:baseline;padding-block:18px;border-top:1px solid var(--line);margin-top:28px}
+.clients b{font-family:var(--display);font-weight:800;font-size:17px}
+.clients-old{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.01em}
+.clients span{font-size:13px;color:var(--muted)}
+.client-tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--leaf);margin-bottom:6px}
+.reels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:780px}
+.reels.five{grid-template-columns:repeat(5,1fr)}
+.snd{position:absolute;right:8px;bottom:8px;font:500 12px var(--body);background:rgba(10,12,18,.62);color:#fff;border:0;border-radius:999px;padding:6px 10px;cursor:pointer;backdrop-filter:blur(4px)}
+.snd[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.sub{display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap;margin:44px 0 14px}
+.sub h3{font-family:var(--display);font-size:24px}
+.grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.webs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.q{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px;font-size:16px;line-height:1.5;color:var(--ink);position:relative}
+.q::before{content:"\201C";font-family:var(--display);font-size:44px;line-height:.6;color:var(--accent);display:block;margin-bottom:6px}
+.q.big{grid-column:span 3;background:var(--blush);border-color:transparent;font-family:var(--display);font-size:clamp(20px,2.4vw,28px);line-height:1.3;font-style:italic}
+.emails{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:900px}
+.email{height:min(70vh,620px);overflow-y:auto;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.email img{display:block;width:100%}
+dialog.tall{overflow-y:auto}
+dialog.tall img{max-height:none}
+.about{display:grid;grid-template-columns:140px minmax(0,1fr);gap:24px;padding-block:clamp(56px,8vw,112px) 0}
+.about .tid{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:500;padding-top:10px}
+.about h2{font-size:clamp(32px,4.6vw,60px);margin-bottom:20px}
+.about p{max-width:62ch;font-size:18px;color:var(--muted);margin:0 0 14px}
+.copy{margin-top:10px;font:500 13px var(--body);background:transparent;color:inherit;border:1px solid currentColor;border-radius:999px;padding:6px 12px;cursor:pointer;opacity:.8}
+@media (max-width:760px){.about{grid-template-columns:1fr;gap:8px}}
+dialog{border:0;padding:0;background:transparent;max-width:min(92vw,720px);max-height:92vh}
+dialog::backdrop{background:rgba(6,8,12,.86)}
+dialog img{display:block;max-width:100%;max-height:88vh;border-radius:6px}
+dialog button{position:fixed;top:16px;right:16px;font:500 14px var(--body);background:var(--surface);color:var(--ink);border:0;border-radius:999px;padding:8px 14px;cursor:pointer}
+
+@media (max-width:1000px){
+  .grid6{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .webs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .quotes{grid-template-columns:1fr}
+  .q.big{grid-column:auto}
+  .services{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .svc:nth-child(2){border-right:0}
+  .svc:nth-child(3){padding-left:0}
+  .svc:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .grid-ai{grid-template-columns:repeat(2,1fr)}
+  .ads{max-width:none}
+  .edits{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .webs{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr}
+  .reel figure:nth-child(2){transform:none}
+  .services{grid-template-columns:1fr}
+  .svc,.svc + .svc{padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .track-head{grid-template-columns:1fr}
+  .track-head p{grid-column:auto}
+  .track-head .spec{text-align:left}
+  .row4{grid-template-columns:repeat(2,1fr)}
+  .statics{grid-template-columns:repeat(2,1fr)}
+  .ads{grid-template-columns:repeat(2,1fr)}
+  .edit{grid-template-columns:1fr 1fr}
+  .reels{gap:8px}
+}
+@media (prefers-reduced-motion:reduce){.zoom img{transition:none}}
+
+/* motion: hero on load, sections reveal as they scroll into view (scroll-driven, so nothing waits on JS) */
+@media (prefers-reduced-motion: no-preference){
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  @keyframes drift{from{background-position:0% 50%}to{background-position:100% 50%}}
+  .cover{background-size:160% 100%;animation:drift 22s ease-in-out infinite alternate}
+  .badge{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1{animation:rise .8s .1s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1 + p,.hero .mono{animation:rise .8s .25s cubic-bezier(.2,.7,.2,1) both}
+  .hero .chips,.hero .clients{animation:rise .8s .4s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .reel figure{animation:fade 1s ease both}
+  .reel figure:nth-child(1){animation-delay:.3s}.reel figure:nth-child(2){animation-delay:.45s}.reel figure:nth-child(3){animation-delay:.6s}
+  @supports (animation-timeline: view()){
+    @keyframes reveal{from{opacity:0;transform:translateY(36px) scale(.985)}to{opacity:1;transform:none}}
+    @keyframes slidein{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}
+    .track-head,.about,.sub,.svc,.edit,.q,.tool,
+    .grid-ai figure,.grid6 figure,.reels figure,.row4 > *,.strip figure,.statics figure,.ads figure,.webs figure,.emails figure,
+    footer h2,footer .contact{
+      animation:reveal linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+    .track-head .tid,.about .tid{animation:slidein linear both;animation-timeline:view();animation-range:entry 10% entry 70%}
+    .grid-ai figure:nth-child(even),.grid6 figure:nth-child(even),.row4 > :nth-child(even),.statics figure:nth-child(even),.ads figure:nth-child(even){animation-range:entry 8% entry 65%}
+    .tile video{animation:zoomout linear both;animation-timeline:view();animation-range:entry 0% cover 50%}
+    @keyframes zoomout{from{transform:scale(1.08)}to{transform:scale(1)}}
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="cover" aria-hidden="true"></div>
+<div class="wrap">
+  <div class="badge" aria-hidden="true">ma.<br>patricia.</div>
+  <nav>
+    <div class="name">Ma Patricia Pineda</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#photo">AI photo</a></li>
+      <li><a href="#carousels">Carousels</a></li>
+      <li><a href="#statics">Ads</a></li>
+      <li><a href="#web">Web</a></li>
+      <li><a href="#email">Email</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <p class="mono" style="margin:0 0 18px">AI content creator · Video editor · Social media</p>
+      <h1>I make fashion brands look <em>shot</em>, without the shoot.</h1>
+      <p>AI models and AI video for fashion brands, and short-form edits for founders and personal brands. I also build and run the social around it: carousels, ad statics, emails, Meta creative and day-to-day account management.</p>
+      <div class="chips">
+        <span class="chip on">AI content creation</span>
+        <span class="chip on">Video editing</span>
+        <span class="chip">Carousels</span>
+        <span class="chip">Ad statics</span>
+        <span class="chip">Meta ads</span>
+        <span class="chip">Social media management</span>
+      </div>
+      <div class="clients">
+        <span class="mono">Clients</span>
+        <b>Streetwear brand</b>
+        <b>Lash educator</b>
+        <b>Brand studio</b>
+      </div>
+    </div>
+    <div class="reel">
+      <figure class="tile r916"><video src="media/ai-bestie.mp4" poster="media/ai-bestie.jpg" muted loop playsinline preload="metadata"></video><span class="tc">AI · 9:16</span></figure>
+      <figure class="tile r916"><video src="media/ai-crosswalk.mp4" poster="media/ai-crosswalk.jpg" muted loop playsinline preload="metadata"></video><span class="tc">AI · 9:16</span></figure>
+      <figure class="tile r916"><video src="media/ai-leopard-cage.mp4" poster="media/ai-leopard-cage.jpg" muted loop playsinline preload="metadata"></video><span class="tc">AI · 9:16</span></figure>
+    </div>
+  </header>
+
+  <div class="services">
+    <div class="svc">
+      <span class="pct">Main focus</span>
+      <h3>AI content creation</h3>
+      <p>On-model content from flat product photos. Consistent AI models, real locations, and the product rendered accurately down to the rhinestones.</p>
+      <ul><li>AI model photography &amp; lookbooks</li><li>Image-to-video for product pages and reels</li><li>Campaign concepts, from studio to street</li></ul>
+    </div>
+    <div class="svc">
+      <span class="pct">Main focus</span>
+      <h3>Video editing</h3>
+      <p>Short-form edits built around one idea that stops the scroll: a day-to-night cut, an x-ray reveal, a talking head cut tight enough to hold a full two minutes.</p>
+      <ul><li>Talking heads with jump cuts &amp; captions</li><li>Vlogs and reels cut to music</li><li>Transitions, titles and effects</li><li>Cutdowns for 9:16, 4:5 and 1:1</li></ul>
+    </div>
+    <div class="svc">
+      <span class="pct">Still doing</span>
+      <h3>Design &amp; ad creative</h3>
+      <p>Carousels, statics and Meta ads designed to be tested, plus the websites and emails they send people to.</p>
+      <ul><li>Carousels, statics &amp; story posts</li><li>Ads &amp; campaign creative</li><li>Website design (Shopify, Wix)</li><li>Email design (Klaviyo)</li></ul>
+    </div>
+    <div class="svc">
+      <span class="pct">Still doing</span>
+      <h3>Social media management</h3>
+      <p>Running a brand's accounts week to week, from the content plan to the numbers at the end of the month.</p>
+      <ul><li>Content planning &amp; calendars</li><li>Scheduling &amp; posting</li><li>Community management</li><li>UGC management</li><li>Leads tracking</li><li>Analytics &amp; reporting</li><li>Calendar &amp; inbox management</li></ul>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <span class="tid">ABOUT</span>
+    <div class="about-body">
+      <h2>Hi, I'm Ma Patricia.</h2>
+      <p>I'm a remote content creator and video editor. I started out making carousels, statics and ads for social media. Now most of my work is AI content and video: AI models and campaign video for a streetwear brand, plus vlogs and reels for a lash educator and a brand studio. For the brand studio I also run social media day to day: planning, posting, engaging with the community and reporting on what worked.</p>
+      <p>I like owning the whole process, from the idea to the AI generation, the edit and the final export in every size a platform needs. I also keep an eye on what's performing, so each new round of content builds on what already worked.</p>
+    </div>
+  </section>
+
+  <section class="track" id="video">
+    <div class="track-head">
+      <span class="tid">V / VIDEO</span>
+      <h2>AI video &amp; editing</h2>
+      <span class="mono spec">9:16 · 3:4 · tap for sound</span>
+      <p>AI video generated from real product photos, edit formats built around one visual idea, and talking-head reels cut tight for founders.</p>
+    </div>
+
+    <div class="sub" style="margin-top:0"><h3>AI video</h3><span class="mono">Streetwear brand · 4 clips</span></div>
+    <div class="grid-ai">
+      <figure><div class="tile r916"><video src="media/ai-cat-duo.mp4" poster="media/ai-cat-duo.jpg" muted loop playsinline preload="metadata"></video><span class="tc">00:04 · AI</span></div><figcaption><b>Couple set with Bengal cat</b>Studio campaign, still to motion</figcaption></figure>
+      <figure><div class="tile r916"><video src="media/ai-car-night.mp4" poster="media/ai-car-night.jpg" muted loop playsinline preload="metadata"></video><span class="tc">00:06 · AI</span></div><figcaption><b>Snow leopard after dark</b>Location shot without a location</figcaption></figure>
+      <figure><div class="tile r916"><video src="media/ai-pink-court.mp4" poster="media/ai-pink-court.jpg" muted loop playsinline preload="metadata"></video><span class="tc">00:10 · AI</span></div><figcaption><b>Pink leopard, empty court</b>Night walk-away for reels</figcaption></figure>
+      <figure><div class="tile r916"><video src="media/ai-wings-walk.mp4" poster="media/ai-wings-walk.jpg" muted loop playsinline preload="metadata"></video><span class="tc">00:06 · AI</span></div><figcaption><b>Rhinestone wings set</b>Street walk, low light</figcaption></figure>
+    </div>
+
+    <div class="sub"><h3>More AI video</h3><span class="mono">Fashion brands · made in Higgsfield</span></div>
+    <div class="grid6">
+      <figure><div class="tile r916"><video src="media/hf-1.mp4" poster="media/hf-1.jpg" muted loop playsinline preload="none"></video><span class="tc">00:15 · AI</span><button class="snd" type="button" aria-pressed="false">Sound</button></div><figcaption><b>Podcast set</b></figcaption></figure>
+      <figure><div class="tile r916"><video src="media/hf-2.mp4" poster="media/hf-2.jpg" muted loop playsinline preload="none"></video><span class="tc">00:05 · AI</span></div><figcaption><b>Denim set, studio</b></figcaption></figure>
+      <figure><div class="tile r916"><video src="media/hf-3.mp4" poster="media/hf-3.jpg" muted loop playsinline preload="none"></video><span class="tc">00:08 · AI</span></div><figcaption><b>BMX at night</b></figcaption></figure>
+      <figure><div class="tile r916"><video src="media/hf-4.mp4" poster="media/hf-4.jpg" muted loop playsinline preload="none"></video><span class="tc">00:10 · AI</span></div><figcaption><b>Pink tee, car hood</b></figcaption></figure>
+      <figure><div class="tile r916"><video src="media/hf-5.mp4" poster="media/hf-5.jpg" muted loop playsinline preload="none"></video><span class="tc">00:08 · AI</span></div><figcaption><b>Graphic tee, street</b></figcaption></figure>
+      <figure><div class="tile r916"><video src="media/hf-6.mp4" poster="media/hf-6.jpg" muted loop playsinline preload="none"></video><span class="tc">00:08 · AI</span></div><figcaption><b>Mirror selfie, denim</b></figcaption></figure>
+    </div>
+
+    <div class="sub"><h3>Edit formats</h3><span class="mono">Streetwear brand · product drop</span></div>
+    <div class="edits">
+      <article class="edit">
+        <div class="tile r34"><video src="media/edit-day-night.mp4" poster="media/edit-day-night.jpg" muted loop playsinline preload="metadata"></video><span class="tc">4 × 00:03</span></div>
+        <div>
+          <h3>Day to Night Sparkle</h3>
+          <p>The same frame, matched from daylight to night, so the rhinestones switch on. Four locations: gas station, rooftop BMW, bodega, subway.</p>
+          <div class="steps"><span>AI stills</span><span>Day + night pairs</span><span>Match cut</span></div>
+        </div>
+      </article>
+      <article class="edit">
+        <div class="tile r34"><video src="media/edit-xray.mp4" poster="media/edit-xray.jpg" muted loop playsinline preload="metadata"></video><span class="tc">3 × 00:01.7</span></div>
+        <div>
+          <h3>Night X-Ray</h3>
+          <p>A wireframe x-ray pass snaps to the real photo. Short, loopable, and built to make people rewatch.</p>
+          <div class="steps"><span>AI x-ray frame</span><span>Hard reveal</span><span>Loop</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="sub"><h3>Reels &amp; vlogs</h3><span class="mono">Lash educator · tap for sound</span></div>
+    <div class="reels" data-reels="edits"></div>
+  </section>
+
+  <section class="track" id="photo">
+    <div class="track-head">
+      <span class="tid">P / AI PHOTOGRAPHY</span>
+      <h2>AI studio campaigns</h2>
+      <span class="mono spec">Streetwear brand · 3:4</span>
+      <p>Studio campaigns shot entirely with AI. Same model and set across every frame, with the product kept accurate down to the rhinestones.</p>
+    </div>
+    <div class="sub" style="margin-top:0"><h3>Iced Out</h3><span class="mono">Black leopard set · 4 stills</span></div>
+    <div class="row4">
+      <button class="zoom tile r34" data-full="media/ice-1.jpg"><img src="media/ice-1.jpg" alt="Model seated on an ice block in a black rhinestone leopard set, blue studio" loading="lazy"></button>
+      <button class="zoom tile r34" data-full="media/ice-2.jpg"><img src="media/ice-2.jpg" alt="Close-up of the hood and chain" loading="lazy"></button>
+      <button class="zoom tile r34" data-full="media/ice-3.jpg"><img src="media/ice-3.jpg" alt="Model walking with a chain on a blue set" loading="lazy"></button>
+      <button class="zoom tile r34" data-full="media/ice-4.jpg"><img src="media/ice-4.jpg" alt="Back view of the zip-up set" loading="lazy"></button>
+    </div>
+    <div class="sub"><h3>Mustard money set</h3><span class="mono">Snow leopard set · 4 stills</span></div>
+    <div class="row4">
+      <button class="zoom tile r34" data-full="media/mustard-1.jpg"><img src="media/mustard-1.jpg" alt="Model seated on a mustard backdrop in the snow leopard set, cash and briefcase beside her" loading="lazy"></button>
+      <button class="zoom tile r34" data-full="media/mustard-2.jpg"><img src="media/mustard-2.jpg" style="object-position:50% 20%" alt="Close-up holding cash, snow leopard zip-up" loading="lazy"></button>
+      <button class="zoom tile r34" data-full="media/mustard-3.jpg"><img src="media/mustard-3.jpg" alt="Full-length standing shot in the snow leopard set on mustard" loading="lazy"></button>
+      <button class="zoom tile r34" data-full="media/mustard-4.jpg"><img src="media/mustard-4.jpg" alt="Crouched pose with cash beside an open briefcase on mustard" loading="lazy"></button>
+    </div>
+  </section>
+
+  <section class="track" id="carousels">
+    <div class="track-head">
+      <span class="tid">G1 / CAROUSELS</span>
+      <h2>Carousels</h2>
+      <span class="mono spec">4:5 · swipe →</span>
+      <p>A personal-brand story and an educational post, each written and designed in the client's own voice.</p>
+    </div>
+    <div class="sub" style="margin-top:0"><div><span class="client-tag">Lash educator</span><h3>Hiding inside your own brand</h3></div><span class="mono">7 slides</span></div>
+    <div class="strip" data-strip="tr-wired-:7"></div>
+    <div class="sub"><div><span class="client-tag">Brand studio</span><h3>Q4 Brand Check-In</h3></div><span class="mono">7 slides</span></div>
+    <div class="strip" data-strip="btm-q4-:7"></div>
+  </section>
+
+  <section class="track" id="statics">
+    <div class="track-head">
+      <span class="tid">G2 / ADS</span>
+      <h2>Ad statics &amp; Meta creative</h2>
+      <span class="mono spec">Streetwear brand · 4:5 feed · 9:16 stories</span>
+      <p>Static ads built in testable sets: polls, comparisons, "build the fit" and A/B/C picks. Each one exported for feed, story and square.</p>
+    </div>
+    <div class="statics" id="staticsGrid"></div>
+    <p class="mono" style="margin:36px 0 0">Meta ad campaign · Leopard Collection · 9:16</p>
+    <div class="ads" id="adsGrid"></div>
+  </section>
+
+  <section class="track" id="web">
+    <div class="track-head">
+      <span class="tid">G3 / WEB</span>
+      <h2>Website design</h2>
+      <span class="mono spec">Shopify · scroll inside</span>
+      <p>A course sales page for a lash educator, and the storefront and product page for a tallow skincare brand.</p>
+    </div>
+    <div class="webs">
+      <figure><div class="email"><img src="media/web-lash.jpg" alt="Full-page design of a beginner lash training sales page" loading="lazy"></div><figcaption><span class="client-tag">Lash educator</span><b>Course sales page</b>Hero, curriculum, student work, FAQ</figcaption></figure>
+      <figure><div class="email"><img src="media/web-skin-home.jpg" alt="Full-page design of a skincare brand homepage" loading="lazy"></div><figcaption><span class="client-tag">Skincare brand</span><b>Homepage</b>Brand story, featured product, social feed</figcaption></figure>
+      <figure><div class="email"><img src="media/web-skin-product.jpg" alt="Full-page design of a skincare product page" loading="lazy"></div><figcaption><span class="client-tag">Skincare brand</span><b>Product page</b>Benefits, how to use, ingredients</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="track" id="email">
+    <div class="track-head">
+      <span class="tid">G4 / EMAIL</span>
+      <h2>Email design</h2>
+      <span class="mono spec">Klaviyo · scroll inside</span>
+      <p>Campaign emails for a supplement brand, and quiz-result emails for a coaching offer. Scroll inside each one to read it in full.</p>
+    </div>
+    <div class="sub" style="margin-top:0"><div><span class="client-tag">Supplement brand</span><h3>Klaviyo campaign emails</h3></div><span class="mono">3 emails · tested in Klaviyo</span></div>
+    <div class="webs">
+      <figure><div class="email"><img src="media/klaviyo-1.jpg" alt="Campaign email: Why nothing has actually worked" loading="lazy"></div><figcaption><b>Why nothing has actually worked</b>Problem-aware story email</figcaption></figure>
+      <figure><div class="email"><img src="media/klaviyo-2.jpg" alt="Campaign email: Why this is built differently" loading="lazy"></div><figcaption><b>Why this is built differently</b>Founder voice, product proof</figcaption></figure>
+      <figure><div class="email"><img src="media/klaviyo-3.jpg" alt="Campaign email: This is where most people get it wrong" loading="lazy"></div><figcaption><b>This is where most people get it wrong</b>Education into bundles</figcaption></figure>
+    </div>
+    <div class="sub"><div><span class="client-tag">Lash educator</span><h3>Quiz-result emails</h3></div><span class="mono">2 of 4 results</span></div>
+    <div class="emails">
+      <figure><div class="email"><img src="media/tr-email-1.jpg" alt="Quiz result email: The Overdriver, option A" loading="lazy"></div><figcaption><b>The Overdriver</b>Option A, photo header</figcaption></figure>
+      <figure><div class="email"><img src="media/tr-email-2.jpg" alt="Quiz result email: The Shrinker, option B" loading="lazy"></div><figcaption><b>The Shrinker</b>Option B, split header</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="track">
+    <div class="track-head">
+      <span class="tid">FX / TOOLS</span>
+      <h2>Tools</h2>
+      <span class="mono spec">Daily stack</span>
+    </div>
+    <div class="tools">
+      <div class="tool"><b>AI</b><span>Higgsfield · Kling · ChatGPT · Claude · Gemini · Freepik</span></div>
+      <div class="tool"><b>Editing</b><span>CapCut</span></div>
+      <div class="tool"><b>Design</b><span>Canva</span></div>
+      <div class="tool"><b>Websites</b><span>Shopify · Wix</span></div>
+      <div class="tool"><b>Email</b><span>Klaviyo</span></div>
+      <div class="tool"><b>Social &amp; scheduling</b><span>Meta Business Suite · Instagram · TikTok · Pinterest · Buffer</span></div>
+      <div class="tool"><b>Organization</b><span>Notion · Google Drive</span></div>
+    </div>
+  </section>
+
+  <section class="track" id="kind-words">
+    <div class="track-head">
+      <span class="tid">KIND WORDS</span>
+      <h2>What clients say</h2>
+      <span class="mono spec">From client messages</span>
+    </div>
+    <div class="quotes">
+      <blockquote class="q big">Honestly no notes for you, you're still doing amazing!! I really appreciate how thorough and detail oriented you are. Super dependable and always on time!! You make my life soooo much easier!</blockquote>
+      <blockquote class="q">You're so quick with everything and so thorough. You're amazing at putting my thoughts into action and making it seem so effortless.</blockquote>
+      <blockquote class="q">I saw the influencer posted, that's an awesome video that I can use as an ad. Great work on that collab.</blockquote>
+      <blockquote class="q">The statics also look really nice! These two are working well, so you can make some variations if you would like.</blockquote>
+    </div>
+  </section>
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <p class="mono" style="margin:0 0 18px">Work with me</p>
+    <h2>Need content that looks like a <em>shoot</em>?</h2>
+    <div class="contact">
+      <div><div class="mono">Email</div><div class="val"><a href="mailto:pineda.mapatricia@gmail.com" style="color:inherit">pineda.mapatricia@gmail.com</a></div><button type="button" id="copyEmail" class="copy">Copy email</button></div>
+      <div><div class="mono">WhatsApp</div><div class="val"><a href="https://wa.me/639953684597" style="color:inherit">+63 995 368 4597</a></div></div>
+      <div><div class="mono">Location</div><div class="val">Remote</div></div>
+      <div><div class="mono">Open to</div><div class="val">Freelance &amp; retainers</div></div>
+    </div>
+    <p class="fine">Selected client work, 2026. Ma Patricia Pineda. In the streetwear work, the products are real and the models and scenes are AI-generated.</p>
+  </div>
+</footer>
+
+<dialog id="lb"><button type="button" id="lbClose">Close</button><img id="lbImg" alt=""></dialog>
+
+<script>
+const statics=[
+ ["static-n1","Pick Your Leopard"],["static-t3","You Can See The Difference"],["static-t2","Build The Fit"],["static-t5","Pick Your Vibe"]
+];
+const ads=[["ad-k01","Five Leopards"],["ad-k10","Black, Never Basic"],["ad-k11","Pink Hits Different"],["ad-k21","Pink or Snow?"]];
+function fill(id,list,ratio,cap){
+  const el=document.getElementById(id);
+  el.innerHTML=list.map(([f,t])=>`<figure><button class="zoom tile ${ratio}" data-full="media/${f}.jpg"><img src="media/${f}.jpg" alt="${t} ad" loading="lazy"></button>${cap?`<figcaption>${t}</figcaption>`:""}</figure>`).join("");
+}
+fill("staticsGrid",statics,"r45",true);
+fill("adsGrid",ads,"r916",true);
+
+const reels={
+ edits:[
+  ["tr-clients-drop2","When clients drop out of nowhere","1:14","Lash educator","Talking head, 28 jump cuts, music and captions"],
+  ["tr-dont-say","Don't say this, say this","1:25","Lash educator","Talking head, 15 jump cuts and captions"],
+  ["tr-diml","Day 1 of going all in","2:02","Lash educator","Day-in-my-life vlog, 66 cuts"]]
+};
+document.querySelectorAll("[data-reels]").forEach(el=>{
+  el.innerHTML=reels[el.dataset.reels].map(([f,t,d,c,x])=>`<figure><div class="tile r916"><video src="media/${f}.mp4" poster="media/${f}.jpg" muted loop playsinline preload="none"></video><span class="tc">${d} · 9:16</span><button class="snd" type="button" aria-pressed="false">Sound</button></div><figcaption><span class="client-tag">${c}</span><b>${t}</b>${x}</figcaption></figure>`).join("");
+});
+document.querySelectorAll("[data-strip]").forEach(el=>{
+  const [pre,n]=el.dataset.strip.split(":");
+  el.innerHTML=Array.from({length:+n},(_,i)=>`<figure class="tile r45"><button class="zoom" data-full="media/${pre}${i+1}.jpg"><img src="media/${pre}${i+1}.jpg" alt="Slide ${i+1}" loading="lazy"></button><span class="n">${i+1}/${n}</span></figure>`).join("");
+});
+document.addEventListener("click",e=>{
+  const b=e.target.closest(".snd"); if(!b) return;
+  const v=b.parentElement.querySelector("video"), on=v.muted;
+  document.querySelectorAll("video").forEach(x=>{x.muted=true});
+  document.querySelectorAll(".snd").forEach(x=>{x.setAttribute("aria-pressed","false");x.textContent="Sound"});
+  if(on){v.muted=false;v.currentTime=0;v.play().catch(()=>{});b.setAttribute("aria-pressed","true");b.textContent="Mute"}
+});
+
+const ce=document.getElementById("copyEmail");
+ce.addEventListener("click",()=>{
+  const addr="pineda.mapatricia@gmail.com";
+  navigator.clipboard?.writeText(addr).then(()=>{ce.textContent="Copied"},()=>{ce.textContent=addr}).catch(()=>{ce.textContent=addr});
+});
+// lightbox
+const lb=document.getElementById("lb"),lbImg=document.getElementById("lbImg");
+document.addEventListener("click",e=>{
+  const b=e.target.closest(".zoom"); if(!b) return;
+  lbImg.src=b.dataset.full; lbImg.alt=b.querySelector("img")?.alt||"";
+  lb.classList.remove("tall");
+  try{lb.showModal()}catch(_){}
+});
+document.getElementById("lbClose").onclick=()=>lb.close();
+lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
+
+// play videos only while visible
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const io=new IntersectionObserver(es=>es.forEach(en=>{
+  const v=en.target;
+  if(en.isIntersecting&&!reduce){v.play().catch(()=>{})}else{v.pause();if(!v.muted){v.muted=true;const b=v.parentElement.querySelector(".snd");if(b){b.setAttribute("aria-pressed","false");b.textContent="Sound"}}}
+}),{threshold:.25});
+document.querySelectorAll("video").forEach(v=>io.observe(v));
+</script>
+
+</body>
+</html>
