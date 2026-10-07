@@ -405,13 +405,11 @@ dialog button{position:fixed;top:16px;right:16px;font:500 14px var(--body);backg
   <section class="track" id="statics">
     <div class="track-head">
       <span class="tid">G2 / ADS</span>
-      <h2>Ad statics &amp; Meta creative</h2>
-      <span class="mono spec">Streetwear brand · 4:5 feed · 9:16 stories</span>
-      <p>Static ads built in testable sets: polls, comparisons, "build the fit" and A/B/C picks. Each one exported for feed, story and square.</p>
+      <h2>Meta ad creative</h2>
+      <span class="mono spec">Streetwear brand · 9:16 stories</span>
+      <p>Story ads from a five-colour collection campaign, written and designed in sets so the hooks can be tested against each other.</p>
     </div>
-    <div class="statics" id="staticsGrid"></div>
-    <p class="mono" style="margin:36px 0 0">Meta ad campaign · Leopard Collection · 9:16</p>
-    <div class="ads" id="adsGrid"></div>
+    <div class="ads" id="adsGrid" style="margin-top:0"></div>
   </section>
 
   <section class="track" id="web">
@@ -497,15 +495,11 @@ dialog button{position:fixed;top:16px;right:16px;font:500 14px var(--body);backg
 <dialog id="lb"><button type="button" id="lbClose">Close</button><img id="lbImg" alt=""></dialog>
 
 <script>
-const statics=[
- ["static-n1","Pick Your Leopard"],["static-t3","You Can See The Difference"],["static-t2","Build The Fit"],["static-t5","Pick Your Vibe"]
-];
 const ads=[["ad-k01","Five Leopards"],["ad-k10","Black, Never Basic"],["ad-k11","Pink Hits Different"],["ad-k21","Pink or Snow?"]];
 function fill(id,list,ratio,cap){
   const el=document.getElementById(id);
   el.innerHTML=list.map(([f,t])=>`<figure><button class="zoom tile ${ratio}" data-full="media/${f}.jpg"><img src="media/${f}.jpg" alt="${t} ad" loading="lazy"></button>${cap?`<figcaption>${t}</figcaption>`:""}</figure>`).join("");
 }
-fill("staticsGrid",statics,"r45",true);
 fill("adsGrid",ads,"r916",true);
 
 const reels={
