@@ -81,6 +81,8 @@ nav ul a:hover{color:var(--ink)}
 figure{margin:0;min-width:0}
 .tile{position:relative;overflow:hidden;border-radius:12px;background:var(--surface)}
 .tile video,.tile img{display:block;width:100%;height:100%;object-fit:cover}
+/* make casual saving harder: no drag, no long-press save, no selection */
+img,video{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
 .r916{aspect-ratio:9/16}.r34{aspect-ratio:3/4}.r45{aspect-ratio:4/5}.r11{aspect-ratio:1/1}
 .tc{position:absolute;left:8px;top:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;background:rgba(10,12,18,.62);color:#fff;padding:3px 6px;border-radius:3px;backdrop-filter:blur(4px)}
 figcaption{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.4}
@@ -539,6 +541,11 @@ document.addEventListener("click",e=>{
 document.getElementById("lbClose").onclick=()=>lb.close();
 lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
 
+// discourage saving: block right-click, drag and the video download/PiP menus on media
+document.addEventListener("contextmenu",e=>{if(e.target.closest("img,video,.tile,.email,dialog"))e.preventDefault()});
+document.addEventListener("dragstart",e=>{if(e.target.closest("img,video"))e.preventDefault()});
+document.querySelectorAll("img").forEach(i=>i.setAttribute("draggable","false"));
+document.querySelectorAll("video").forEach(v=>{v.setAttribute("controlsList","nodownload noplaybackrate");v.disablePictureInPicture=true;v.setAttribute("disableRemotePlayback","")});
 // play videos only while visible
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const io=new IntersectionObserver(es=>es.forEach(en=>{
